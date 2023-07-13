@@ -5,18 +5,17 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import time
-#from config import EMAIL, PASSWORD
 import pandas as pd
 import random
 import datetime
 import time
 
 
-# Time Frame
+# tIME FRAME TO EXECUTE (WORKING HOURS)
 start_time = datetime.time(8, 0)
 end_time = datetime.time(21, 0)
 
-# The Most Important Random
+# THE MOST IMPORTANT RANDOM PARAMETERS
 
 list_0 = [90, 120, 90, 120, 90]
 
@@ -32,9 +31,9 @@ r3 = random.choice(list_2)
 
 cap_1 = [8]
 
-############################################
-
 url = 'https://www.gmail.com'
+
+# USER INFORMATION
 
 gmail_username = 'example@gmail.com'
 gmail_password = "password123"
@@ -74,7 +73,7 @@ Big Kahuna Burgers Network Inc.
 dataframe = pd.read_excel('data.xlsx')
 
 driver = webdriver.Chrome(executable_path='PATH TO CHROMEDRIVER EXEC')
-# Example ('C:\\Users\\User01\Documents\\Content\\')
+# Example ('C:\\Users\\User01\Documents\\Content\\chromedriver.exe')
 
 driver.get(url)
 
@@ -98,7 +97,7 @@ while True:
     for index, i in enumerate(dataframe.index):
         now = datetime.datetime.now()
         if start_time <= now.time() <= end_time:
-            print("El Script se esta ejecutando")
+            print("THE SCRIPT IS RUNNING")
 
             time.sleep(r3)
 
